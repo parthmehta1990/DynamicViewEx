@@ -12,7 +12,7 @@ data class FieldTableModel (
     var fieldname: String,
 
     @ColumnInfo(name = "isActive")
-    var Active: Integer
+    var Active: Int
 
 ) {
 

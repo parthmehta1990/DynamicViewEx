@@ -15,6 +15,8 @@ interface DAOAccess {
     suspend fun InsertData(fieldTableModel: FieldTableModel)
 
     @Query("SELECT * FROM Field ")
-    fun getDetails(username: String?) : LiveData<FieldTableModel>
+    fun getDetails() : LiveData<List<FieldTableModel>>
 
+    @Query("SELECT * FROM Field WHERE fieldname =:fname")
+    fun getFieldDetails(fname: String?) : LiveData<FieldTableModel>
 }
